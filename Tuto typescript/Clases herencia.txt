@@ -1,0 +1,59 @@
+class Animal {
+
+  constructor(name) {
+    this.speed = 11;
+    this.name = name;
+  }
+
+  run(speed) {
+    this.speed += speed;
+    alert(this.name + ' runs with speed ' + this.speed);
+  }
+
+  stop() {
+    this.speed = 0;
+    alert(this.name + ' stopped.');
+  }
+}
+
+// Inherit from Animal
+class Rabbit extends Animal {
+  hide() {
+    alert(this.name + ' hides');
+  }
+}
+
+let rabbit = new Rabbit("White Rabbit");
+
+rabbit.run(5); // White Rabbit runs with speed 5.
+rabbit.hide(); // White Rabbit hides!
+
+
+
+class Mamifero {
+    nombre : string;
+    patas : number;    
+ 
+    constructor(nombre : string, patas : number){
+        this.nombre = nombre;
+        this.patas = patas;
+    };
+ 
+    informacion(){
+        console.log("Soy un animal con " + this.patas + " patas, y me llamo " + this.nombre + ".");
+    };
+};
+ 
+class Perro extends Mamifero {
+    
+    _this.patas = 4;
+        
+    met (pat) {
+    
+    	console.log('Hola mundo ' + pat)
+    };
+};
+ 
+var perro = new Perro('toby');
+perro.informacion();
+perro.met(4);

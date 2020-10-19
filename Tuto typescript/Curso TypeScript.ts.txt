@@ -1,0 +1,72 @@
+
+class Greeter {
+    greeting: string;
+	constructor (message: string) {
+		this.greeting = message;
+	}
+	greet() {
+		return "Hello, " + this.greeting;
+	}
+}
+
+var greeter = new Greeter("world");
+
+var button = document.createElement('button')
+button.innerText = "Say Hello"
+button.onclick = function() {
+	alert(greeter.greet())
+}
+
+document.body.appendChild(button);
+
+class Persona{
+ 
+    nombre: string; // propiedad
+    edad: number; // propiedad
+    
+    // si no lo construyo puedo poner valores
+    // Si lo construyo me obliga a enviarle algo al crearlo, 
+    // El constructor solo puedo usarlo al crearlo
+    constructor () {
+        this.nombre = nombre;
+        this.edad = edad;
+	}
+        
+    constructor (nombre: string, edad: number) {
+    	this.nombre = nombre;
+        this.edad = edad;
+	}
+ 
+    saludar(): string { // método
+        return "Hola! mi nombre es" + this.nombre + ".";
+    }
+ 
+    getEdad(): string {
+        return "Tengo " + this.edad + " años.";
+    }
+}
+
+//Primero declaramos una variable del tipo Persona
+var persona : Persona; 
+//Luego creamos una instancia de la clase utilizando 'new' y el nombre de la clase
+persona = new Persona(); 
+persona.nombre = 'Carlos'; 
+//Y ahora le asignamos una edad
+persona.edad = 18; 
+//Y ahora llamamos al método 'saludar'
+
+persona = new Persona('maria', 14); 
+
+var buttonCLass = document.createElement('button')
+buttonCLass.innerText = "Test Class"
+buttonCLass.onclick = function() {
+    alert(persona.saludar());
+}
+//en la consola vemos 'Hola! mi nombre es Carlos.'
+ 
+//Llamamos al método edad (con el mismo nombre de la propiedad edad)
+//alert (persona.getEdad());
+//Vemos una ventana alert con el mensaje 'Tengo 18 años.'
+
+document.body.appendChild(buttonCLass);
+

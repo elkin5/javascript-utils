@@ -1,0 +1,53 @@
+
+class Persona{
+ 
+    nombre: string; // propiedad
+    edad: number; // propiedad
+    
+    // si no lo construyo puedo poner valores
+    // Si lo construyo me obliga a enviarle algo al crearlo, 
+    // El constructor solo puedo usarlo al crearlo     
+    constructor (nombre: string, edad: number) {
+    this.nombre = nombre;
+    this.edad = edad;
+		}
+ 
+    saludar(): string { // método
+        return "Hola! mi nombre es " + this.nombre + ".";
+    }
+ 
+    getEdad(): string {
+        return "Tengo " + this.edad + " años.";
+    }
+}
+
+// utilizando la creacion sin constructor
+//Primero declaramos una variable del tipo Persona
+var persona : Persona; 
+//Luego creamos una instancia de la clase utilizando 'new' y el nombre de la clase
+persona = new Persona();
+
+persona.nombre = 'jhon';
+
+var buttonCLass = document.createElement('button')
+buttonCLass.innerText = "Test Class"
+buttonCLass.onclick = function() {
+    alert(persona.saludar());
+}
+
+document.body.appendChild(buttonCLass);
+
+// utilizando la creacion con constructor
+var persona2 : Persona;
+persona2 = new Persona('lila', 2);
+
+var buttonCLass2 = document.createElement('button')
+buttonCLass2.innerText = "Test Class 2"
+buttonCLass2.onclick = function() {
+    alert(persona2.saludar());
+}
+
+document.body.appendChild(buttonCLass2);
+
+
+
